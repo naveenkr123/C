@@ -28,6 +28,23 @@ void dist2D(){
     printf("Distance between points A and B is %.2f",dist2D);
 }
 
+//Factorial of any number
+void factorial(){
+    int x,y=1;
+    printf("Enter any number to find its factorial: ");
+    scanf("%d",&x);
+    printf("\n!%d = ",x);
+    for(int i=x;i>0;i--){
+        y*=i;
+
+        if(i!=1)
+        printf("%d*",i);
+        else
+        printf("%d",i);
+    }
+    printf("\nFactorial of %d is %d\n",x,y);
+}
+
 //Volume of sphere
 void sphereVol(){
     float r,sphereVol;
@@ -157,18 +174,19 @@ int main(){
 
     printf("1 -> Distance between any two points A and B in 3D\n");
     printf("2 -> Distance between any two points A and B in 2D\n");
-    printf("3 -> Volume of sphere\n");
-    printf("4 -> Surface area of sphere\n");
-    printf("5 -> Volume of Hemi-sphere\n");
-    printf("6 -> Surface area of Hemi-sphere\n");
-    printf("7 -> Volume of cone\n");
-    printf("8 -> Surface area of cone\n");
-    printf("9 -> Volume of Cylinder\n");
-    printf("10 -> Surface area of Cylinder\n");
-    printf("11 -> Volume of cube\n");
-    printf("12 -> Surface area of cube\n");
-    printf("13 -> Volume of cuboid\n");
-    printf("14 -> Surface area of cuboid\n");
+    printf("3 -> Factorial of any number\n");
+    printf("4 -> Volume of sphere\n");
+    printf("5 -> Surface area of sphere\n");
+    printf("6 -> Volume of Hemi-sphere\n");
+    printf("7 -> Surface area of Hemi-sphere\n");
+    printf("8 -> Volume of cone\n");
+    printf("9 -> Surface area of cone\n");
+    printf("10 -> Volume of Cylinder\n");
+    printf("11 -> Surface area of Cylinder\n");
+    printf("12 -> Volume of cube\n");
+    printf("13 -> Surface area of cube\n");
+    printf("14 -> Volume of cuboid\n");
+    printf("15 -> Surface area of cuboid\n");
     printf("\nChoose any option: ");
     scanf("%d",&option);
     printf("\n");
@@ -178,28 +196,30 @@ int main(){
     else if(option==2)
     dist2D();
     else if(option==3)
-    sphereVol();
+    factorial();
     else if(option==4)
-    sphereAr();
+    sphereVol();
     else if(option==5)
-    hemiSphereVol();
+    sphereAr();
     else if(option==6)
-    hemiSphereAr();
+    hemiSphereVol();
     else if(option==7)
-    coneVol();
+    hemiSphereAr();
     else if(option==8)
-    coneAr();
+    coneVol();
     else if(option==9)
-    cylinderVol();
+    coneAr();
     else if(option==10)
-    cylinderAr();
+    cylinderVol();
     else if(option==11)
-    cubeVol();
+    cylinderAr();
     else if(option==12)
-    cubeAr();
+    cubeVol();
     else if(option==13)
-    cuboidVol();
+    cubeAr();
     else if(option==14)
+    cuboidVol();
+    else if(option==15)
     cuboidAr();
 
     return 0;
