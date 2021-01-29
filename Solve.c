@@ -12,7 +12,7 @@ void dist3D(){
     scanf("%f,%f,%f",&x2,&y2,&z2);
     num=((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1) + (z2-z1)*(z2-z1));
     dist3D=sqrt(num);
-    printf("Distance between points A and B is %.2f\n",dist3D);
+    printf("\nDistance between points A and B is %.2f\n",dist3D);
 }
 
 //Distance between any two points in 2D
@@ -25,7 +25,7 @@ void dist2D(){
     scanf("%f,%f",&x2,&y2);
     num=((x2-x1)*(x2-x1))+((y2-y1)*(y2-y1));
     dist2D=sqrt(num);
-    printf("Distance between points A and B is %.2f",dist2D);
+    printf("\nDistance between points A and B is %.2f",dist2D);
 }
 
 //Factorial of any number
@@ -191,36 +191,39 @@ int main(){
     scanf("%d",&option);
     printf("\n");
 
-    if(option==1)
-    dist3D();
-    else if(option==2)
-    dist2D();
-    else if(option==3)
-    factorial();
-    else if(option==4)
-    sphereVol();
-    else if(option==5)
-    sphereAr();
-    else if(option==6)
-    hemiSphereVol();
-    else if(option==7)
-    hemiSphereAr();
-    else if(option==8)
-    coneVol();
-    else if(option==9)
-    coneAr();
-    else if(option==10)
-    cylinderVol();
-    else if(option==11)
-    cylinderAr();
-    else if(option==12)
-    cubeVol();
-    else if(option==13)
-    cubeAr();
-    else if(option==14)
-    cuboidVol();
-    else if(option==15)
-    cuboidAr();
+    switch(option){
+        case 1: dist3D();
+        break;
+        case 2: dist2D();
+        break;
+        case 3: factorial();
+        break;
+        case 4: sphereVol();
+        break;
+        case 5: sphereAr();
+        break;
+        case 6: hemiSphereVol();
+        break;
+        case 7: hemiSphereAr();
+        break;
+        case 8: coneVol();
+        break;
+        case 9: coneAr();
+        break;
+        case 10: cylinderVol();
+        break;
+        case 11: cylinderAr();
+        break;
+        case 12: cubeVol();
+        break;
+        case 13: cubeAr();
+        break;
+        case 14: cuboidVol();
+        break;
+        case 15: cuboidAr();
+        break;
+        default: printf("\nInvalid option!\n");
+    }
 
     return 0;
 }
