@@ -23,8 +23,7 @@ int main(){
     for(int i=0;i<5;i++){
         key();
         printf("\n");
-        sleep(1);
-        //Sleep(1000) for windows
+        sleep(1);   //Sleep(1000) for windows
     }
     return 0;
 }
